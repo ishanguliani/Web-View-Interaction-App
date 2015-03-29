@@ -23,6 +23,7 @@ header	{
 nav	{
 	float:right;
 	width:30%;
+	margin:8px;
 }
 
 
@@ -30,8 +31,9 @@ section	{
 
 	background: white;
 	color: black;
-	
-		
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;	
 	padding: 5px;	
 	border-style: solid;
 	border-width: 5px;
@@ -44,11 +46,12 @@ footer	{
 
 	background: black;
 	color: white;
-	<!--margin-left:auto;
-	margin-right:auto;-->	
+	margin-left:auto;
+	margin-right:auto;	
 	font-size: 0.8em;
 	width:70%;
-	padding: 10px
+	padding: 10px;
+	overflow:hidden;
 	
 
 }

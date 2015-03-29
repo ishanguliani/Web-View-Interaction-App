@@ -2,6 +2,7 @@ package com.example.webviewapp;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
@@ -28,10 +29,11 @@ public class MainActivity extends Activity {
       webView.getSettings().setJavaScriptEnabled(true);
      // webView.getSettings().setBuiltInZoomControls(true) ;
       // this is set webview in ur activity
-      webView.setWebViewClient(new WebViewClient()); 
+      webView.setWebViewClient(new MyBrowser()); 
      // webView.loadUrl("http://www.androidaspect.com/?m=1");
-      
-      webView.loadUrl("file:///android_asset/firsthtml.html");
+      webView.loadUrl("file:///android_asset/first-form.html");
+
+    //  webView.loadUrl("file:///android_asset/firsthtml.html");
         
       //browser = (WebView)findViewById(R.id.webView1);
       //browser.setWebViewClient(new MyBrowser());
@@ -52,8 +54,11 @@ public class MainActivity extends Activity {
    private class MyBrowser extends WebViewClient {
       @Override
       public boolean shouldOverrideUrlLoading(WebView view, String url) {
+    	  Log.i("myapp", "Entered My Browser") ;
     	 // open(view);
-         view.loadUrl("https://m.facebook.com/");
+        // view.loadUrl("https://m.facebook.com/");
+          //webView.loadUrl("file:///android_asset/first-form.html");
+
          return true;
       }
    }
